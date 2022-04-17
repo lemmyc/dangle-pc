@@ -9,19 +9,27 @@ const Navbar = ()=>{
                 <span className={styles.brandName}>Đăng Lê PC</span>
             </div>
             <div className={styles.item}>
-                <div className={styles.searchBar}></div>
+                <div className={styles.searchBar}>
+                    <input type="text" className={styles.searchFieldControl} placeholder='Nhập sản phẩm cần tìm kiếm' />
+                    <Image src="/images/magglass.png" className={styles.searchIcon} alt="" width="32" height="32"  />
+                </div>
             </div>
             <div className={styles.item}>
-            <ul className={styles.list}>
-                    <li className={styles.listItem}>Trang chủ</li>
-                    <li className={styles.listItem}>Sản phẩm</li>
-                    <li className={styles.listItem}>Build PC</li>
-                    <li className={styles.listItem}>Liên hệ</li>
-                    <li className={styles.listItem}>
-                        Giỏ hàng
-                        <Image src="/images/cart.png" className={styles.cartBtn} alt="" width="48" height="48" />
-                    </li>
+                <ul className={styles.list}>
+                        <li className={styles.listItem}>Khuyến mãi</li>
+                        <li className={styles.listItem}>Đơn hàng</li>
+                        <li className={styles.listItem}>Đăng nhập</li>
+                        <li className={styles.listItem}>Xây dựng cấu hình</li>
+                        <li className={styles.listItem}>
+                            Giỏ hàng
+                        </li>
                 </ul>
+            </div>
+            <div className={styles.item}>
+                <div className={styles.cart}>
+                    <Image src="/images/cart.png" alt="" width="32" height="32"/>
+                    <span className={styles.itemCounter}>2</span>
+                </div>
             </div>
         </div>
     )
