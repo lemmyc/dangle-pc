@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaShoppingCart, FaSearch } from 'react-icons/fa'
 import styles from '../styles/Navbar.module.css'
 import Image from 'next/image'
 const Navbar = ()=>{
@@ -11,7 +12,7 @@ const Navbar = ()=>{
             <div className={styles.item}>
                 <div className={styles.searchBar}>
                     <input type="text" className={styles.searchFieldControl} placeholder='Nhập sản phẩm cần tìm kiếm' />
-                    <Image src="/images/magglass.png" className={styles.searchIcon} alt="" width="32" height="32"  />
+                    <FaSearch  className={styles.searchBtn}/>
                 </div>
             </div>
             <div className={styles.item}>
@@ -22,14 +23,9 @@ const Navbar = ()=>{
                         <li className={styles.listItem}>Xây dựng cấu hình</li>
                         <li className={styles.listItem}>
                             Giỏ hàng
+                            <FaShoppingCart className={styles.shoppingCart} />
                         </li>
                 </ul>
-            </div>
-            <div className={styles.item}>
-                <div className={styles.cart}>
-                    <Image src="/images/cart.png" alt="" width="32" height="32"/>
-                    <span className={styles.itemCounter}>2</span>
-                </div>
             </div>
         </div>
     )
